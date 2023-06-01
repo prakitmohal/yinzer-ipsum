@@ -1,14 +1,11 @@
 import random
 
-# figure out what our enum is
+# repeating words suck, lets prevent that
 def getEnum(enum,length):
 
 	newEnum = enum
-
 	while(enum == newEnum):
-
 		newEnum = random.randint(0,length-1)
-
 	return newEnum
 
 # read in the text file
@@ -20,25 +17,35 @@ file.close()
 for line in wordlist:
 	line = line.strip()
 
-# we don't want to repeat words that's awkward
 length = len(wordlist)
 enum = 0
 
-# Parameters: 1 Paragraph, 5 Sentences, each sentence has 7-9 phrases
-for x in range(5):
+print()
+paragraphs = int(input("How many paragraphs do yinz need n'at?: "))
+print()
 
-	# Capitalize the first word
-	enum = getEnum(enum,length)
-	firstWord = wordlist[enum].strip()
-	firstWord = firstWord[0].upper() + firstWord[1:]
-	print(firstWord, end=' ')
+# loop over number of paragraphs
+for i in range(paragraphs):
 
-	# Get the next set of words
-	for y in range(random.randint(7,9)-2):
+	# Parameters: 5 Sentences, each sentence has 8 phrases
+	for x in range(5):
 
+		# Capitalize the first word
 		enum = getEnum(enum,length)
-		print(wordlist[enum].strip(), end=' ')
+		firstWord = wordlist[enum].strip()
+		firstWord = firstWord[0].upper() + firstWord[1:]
+		print(firstWord, end=' ')
 
-	# Print the last word
-	enum = getEnum(enum,length)
-	print(wordlist[enum].strip(), end='. ')
+		# Get the next set of words
+		for y in range(6):
+
+			enum = getEnum(enum,length)
+			print(wordlist[enum].strip(), end=' ')
+
+		# Print the last word
+		enum = getEnum(enum,length)
+		print(wordlist[enum].strip(), end='. ')
+
+	print("\n")
+
+
