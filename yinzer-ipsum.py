@@ -22,7 +22,7 @@ for line in rawdata.split('\n'):
 	wordlist[index] = line
 	index = index + 1
 
-length = len(wordlist)
+length = len(wordlist)-1
 enum = 0
 
 print()
@@ -52,3 +52,5 @@ for i in range(paragraphs):
 		print(wordlist[enum].strip(), end='. ')
 
 	print("\n")
+
+
