@@ -10,6 +10,8 @@ You may have to install requests `pip3 install requests`
 
 Example output:
 
+-------------------------------------------------------------
+
 C:\Users\Desktop>python yinzer-ipsum.py
 
 How many paragraphs do yinz need n'at?: 2
