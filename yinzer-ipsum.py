@@ -1,4 +1,5 @@
 import random
+import requests
 
 # repeating words suck, lets prevent that
 def getEnum(enum,length):
@@ -9,13 +10,17 @@ def getEnum(enum,length):
 	return newEnum
 
 # read in the text file
-file = open("wordlist.txt", "r")
-wordlist = file.readlines()
-file.close()
+url = 'https://raw.githubusercontent.com/prakitmohal/yinzer-ipsum/main/wordlist.txt'
+response = requests.get(url)
+rawdata = response.text
 
 # strip out extraneous line breaks
-for line in wordlist:
-	line = line.strip()
+index = 0
+wordlist = {}
+
+for line in rawdata.split('\n'):
+	wordlist[index] = line
+	index = index + 1
 
 length = len(wordlist)
 enum = 0
@@ -47,5 +52,3 @@ for i in range(paragraphs):
 		print(wordlist[enum].strip(), end='. ')
 
 	print("\n")
-
-
