@@ -10,8 +10,8 @@ dippy eggs
 Duquesne
 Franco Harris
 fries on your sandwich
-Gyn Iggle
 gumband
+Gyn Iggle
 Iceburgh
 Immaculate Reception
 Incline
@@ -24,8 +24,8 @@ Lawrenceville
 Mario Lemieux
 Monongahela
 n'at
-needs cleaned
 nebby
+needs warshed
 Pens
 perogies
 Picksburgh
@@ -40,7 +40,5 @@ Squirrel Hill
 Steel City
 Steely McBeam
 Stillers
-warsh
 Wiz Khalifa
-yinzer
 yinz
