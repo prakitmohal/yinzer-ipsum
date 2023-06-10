@@ -5,3 +5,5 @@ Generate your own Lorem Ipsum Text, Pittsburghese style!
 - yinzer-ipsum.py runs the code
 
 It's pretty straightforward, it asks how many paragraphs you want and it generaates it. It assumes 8 phrases/paragraph and kindly formats it nicely
+
+You may have to install requests `pip3 install requests`
